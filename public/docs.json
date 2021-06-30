@@ -1,0 +1,826 @@
+{
+  "src/data/raw/Badge.js": {
+    "description": "",
+    "displayName": "Badge",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "value": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number to display in badge"
+      }
+    }
+  },
+  "src/data/raw/Banner.js": {
+    "description": "",
+    "displayName": "Banner",
+    "methods": []
+  },
+  "src/data/raw/Breadcrumbs.js": {
+    "description": "",
+    "displayName": "BreadCrumbs",
+    "methods": []
+  },
+  "src/data/raw/ButtonBar.js": {
+    "description": "",
+    "displayName": "ButtonBar",
+    "methods": []
+  },
+  "src/data/raw/Card.js": {
+    "description": "",
+    "displayName": "Card",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Component's children"
+      }
+    }
+  },
+  "src/data/raw/Checkbox.js": {
+    "description": "",
+    "displayName": "Checkbox",
+    "methods": []
+  },
+  "src/data/raw/Codeblock.js": {
+    "description": "",
+    "displayName": "Codeblock",
+    "methods": []
+  },
+  "src/data/raw/Drawer.js": {
+    "description": "",
+    "displayName": "Drawer",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Component's children"
+      }
+    }
+  },
+  "src/data/raw/DropdownY.js": {
+    "description": "",
+    "displayName": "DropdownY",
+    "methods": []
+  },
+  "src/data/raw/Loader.js": {
+    "description": "",
+    "displayName": "Loader",
+    "methods": [],
+    "props": {
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Inline or full-page"
+      }
+    }
+  },
+  "src/data/raw/Notification.js": {
+    "description": "",
+    "displayName": "Notification",
+    "methods": []
+  },
+  "src/data/raw/Paginate.js": {
+    "description": "",
+    "displayName": "Paginate",
+    "methods": [],
+    "props": {
+      "page": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Current page"
+      },
+      "totalPages": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Total pages"
+      },
+      "prevPage": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "nextPage": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      }
+    }
+  },
+  "src/data/raw/Post.js": {
+    "description": "",
+    "displayName": "Post",
+    "methods": []
+  },
+  "src/data/raw/Prompt.js": {
+    "description": "",
+    "displayName": "Prompt",
+    "methods": []
+  },
+  "src/data/raw/Tooltip.js": {
+    "description": "",
+    "displayName": "Tooltip",
+    "methods": []
+  },
+  "src/data/raw/animate/Blur.js": {
+    "description": "",
+    "displayName": "Blur",
+    "methods": []
+  },
+  "src/data/raw/animate/DropdownY.js": {
+    "description": "",
+    "displayName": "DropdownY",
+    "methods": []
+  },
+  "src/data/raw/animate/Fade.js": {
+    "description": "",
+    "displayName": "Fade",
+    "methods": []
+  },
+  "src/data/raw/animate/Rolldown.js": {
+    "description": "",
+    "displayName": "Rolldown",
+    "methods": []
+  },
+  "src/data/raw/animate/Slide.js": {
+    "description": "",
+    "displayName": "Slide",
+    "methods": []
+  },
+  "src/data/raw/animate/SwitchFade.js": {
+    "description": "",
+    "displayName": "SwitchFade",
+    "methods": []
+  },
+  "src/data/raw/animate/SwitchSlide.js": {
+    "description": "",
+    "displayName": "SwitchSlide",
+    "methods": []
+  },
+  "src/data/raw/atoms/Anchor.js": {
+    "description": "",
+    "displayName": "Anchor",
+    "methods": []
+  },
+  "src/data/raw/atoms/Blur.js": {
+    "description": "",
+    "displayName": "Blur",
+    "methods": []
+  },
+  "src/data/raw/atoms/CloseButton.js": {
+    "description": "",
+    "displayName": "CloseButton",
+    "methods": []
+  },
+  "src/data/raw/atoms/Footer.js": {
+    "description": "",
+    "displayName": "Footer",
+    "methods": []
+  },
+  "src/data/raw/atoms/Line.js": {
+    "description": "",
+    "displayName": "Line",
+    "methods": []
+  },
+  "src/data/raw/atoms/ReadMore.js": {
+    "description": "",
+    "displayName": "ReadMore",
+    "methods": []
+  },
+  "src/data/raw/atoms/ShowPass.js": {
+    "description": "",
+    "displayName": "ShowPass",
+    "methods": []
+  },
+  "src/data/raw/atoms/Tree.js": {
+    "description": "",
+    "displayName": "Tree",
+    "methods": []
+  },
+  "src/data/raw/atoms/TreeBranches.js": {
+    "description": "",
+    "displayName": "TreeBranches",
+    "methods": []
+  },
+  "src/data/raw/btn/Button.js": {
+    "description": "",
+    "displayName": "Button",
+    "methods": [],
+    "props": {
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Button label"
+      },
+      "kind": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"fill\"",
+              "computed": false
+            },
+            {
+              "value": "\"empty\"",
+              "computed": false
+            },
+            {
+              "value": "\"active\"",
+              "computed": false
+            },
+            {
+              "value": "\"warning\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Button style",
+        "defaultValue": {
+          "value": "\"empty\"",
+          "computed": false
+        }
+      },
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"button\"",
+              "computed": false
+            },
+            {
+              "value": "\"submit\"",
+              "computed": false
+            },
+            {
+              "value": "\"reset\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Function of button",
+        "defaultValue": {
+          "value": "\"button\"",
+          "computed": false
+        }
+      },
+      "CTA": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the button is a Call To Action, it will be rounder",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disabled state",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Data id"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      }
+    }
+  },
+  "src/data/raw/btn/IconButton.js": {
+    "description": "",
+    "displayName": "IconButton",
+    "methods": []
+  },
+  "src/data/raw/btn/Toggle.js": {
+    "description": "",
+    "displayName": "Toggle",
+    "methods": []
+  },
+  "src/data/raw/editor/EditorTitle.js": {
+    "description": "",
+    "displayName": "EditorTitle",
+    "methods": []
+  },
+  "src/data/raw/editor/RichEditor.js": {
+    "description": "",
+    "displayName": "RichEditor",
+    "methods": []
+  },
+  "src/data/raw/editor/Toolbar.js": {
+    "description": "",
+    "displayName": "Toolbar",
+    "methods": []
+  },
+  "src/data/raw/input/Input.js": {
+    "description": "",
+    "displayName": "Input",
+    "methods": [],
+    "props": {
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Textarea label"
+      },
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the textarea is inline"
+      },
+      "fail": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Failed state"
+      },
+      "size": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Size"
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Name"
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Placeholder"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disabled state"
+      },
+      "showPass": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Show password",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "handleBlur": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onBlur"
+      },
+      "handleKeyDown": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onKeydown"
+      },
+      "handleChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onChange"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      }
+    }
+  },
+  "src/data/raw/input/Password.js": {
+    "description": "",
+    "displayName": "Password",
+    "methods": []
+  },
+  "src/data/raw/input/Textarea.js": {
+    "description": "",
+    "displayName": "Textarea",
+    "methods": [],
+    "props": {
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Textarea label"
+      },
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the textarea is inline"
+      },
+      "fail": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Failed state"
+      },
+      "rows": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of initial rows",
+        "defaultValue": {
+          "value": "1",
+          "computed": false
+        }
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Name"
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Placeholder"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disabled state"
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "handleBlur": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onBlur"
+      },
+      "handleKeyDown": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onKeydown"
+      },
+      "handleChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onChange"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      }
+    }
+  },
+  "src/data/raw/layout/Flex.js": {
+    "description": "",
+    "displayName": "Flex",
+    "methods": []
+  },
+  "src/data/raw/layout/Form.js": {
+    "description": "",
+    "displayName": "Form",
+    "methods": []
+  },
+  "src/data/raw/layout/Grid.js": {
+    "description": "",
+    "displayName": "Grid",
+    "methods": []
+  },
+  "src/data/raw/layout/TitledPage.js": {
+    "description": "",
+    "displayName": "TitledPage",
+    "methods": []
+  },
+  "src/data/raw/menu/Menu.js": {
+    "description": "A very simple menu that wraps around items.",
+    "displayName": "Menu",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Component's children"
+      }
+    }
+  },
+  "src/data/raw/menu/MenuItem.js": {
+    "description": "",
+    "displayName": "MenuItem",
+    "methods": [],
+    "props": {
+      "nav": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "link": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "dropdown": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "active": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "id": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Data id"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Component's children"
+      }
+    }
+  },
+  "src/data/raw/menu/SelectMenu.js": {
+    "description": "",
+    "displayName": "SelectMenu",
+    "methods": []
+  },
+  "src/data/raw/menu/accordion/AccordionMenu.js": {
+    "description": "",
+    "displayName": "AccordionMenu",
+    "methods": [],
+    "props": {
+      "panels": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "label": {
+              "name": "string",
+              "required": true
+            },
+            "items": {
+              "name": "array",
+              "required": true
+            },
+            "checked": {
+              "name": "bool",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{ \n    checked: true\n}",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/data/raw/menu/accordion/AccordionPanel.js": {
+    "description": "",
+    "displayName": "AccordionPanel",
+    "methods": []
+  },
+  "src/data/raw/panel/Panel.js": {
+    "description": "",
+    "displayName": "Panel",
+    "methods": []
+  },
+  "src/data/raw/panel/PanelDropdown.js": {
+    "description": "",
+    "displayName": "PanelDropdown",
+    "methods": []
+  },
+  "src/data/raw/panel/PanelTitle.js": {
+    "description": "",
+    "displayName": "PanelTitle",
+    "methods": []
+  },
+  "src/data/raw/table/Cell.js": {
+    "description": "",
+    "displayName": "Cell",
+    "methods": []
+  },
+  "src/data/raw/table/Table.js": {
+    "description": "",
+    "displayName": "Table",
+    "methods": []
+  },
+  "src/data/raw/table/TableHeader.js": {
+    "description": "",
+    "displayName": "TableHeader",
+    "methods": []
+  },
+  "src/data/raw/tag/TagPreview.js": {
+    "description": "",
+    "displayName": "TagPreview",
+    "methods": []
+  }
+}

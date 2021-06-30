@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Menu, MenuItem, Grid } from 'skylight-react';
+import { COMPONENTS } from './data/components';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+      <Link path="/">
+        <h1>Test site : )</h1>
+      </Link>
+      <Grid columns="15rem 1fr">
+        <Menu>
+          {COMPONENTS.map(el => {
+           return (<MenuItem key={el.path} nav path={el.path}>
+             {el.label}
+            </MenuItem>)
+          })}
+        </Menu>
+          <Switch>
+            {COMPONENTS.map(({layout: Layout, ...c}) => {
+              return(
+                <Route key={c.path}
+                      path={`/${c.path}`}
+                      render={(props) => <Layout object={c} {...props}/>}
+                      />
+                    )})
+              }
+               <Route exact path="/" component={Home}/>
+
+          </Switch>
+      </Grid>
+      </Router>
   );
 }
 
 export default App;
+
