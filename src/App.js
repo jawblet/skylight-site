@@ -9,7 +9,7 @@ function App() {
   return (
       <Router>
       <Link path="/">
-        <h1>Test site : )</h1>
+        <h1>Home</h1>
       </Link>
       <Grid columns="15rem 1fr">
         <Menu>
