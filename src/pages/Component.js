@@ -5,7 +5,7 @@ import { Flex } from 'skylight-react';
 export const Component = ({ object }) => {  
     return (
         <Flex column gap={1.5} className="component">
-            {object.label}
+            <h2>{object.label}</h2>
             <ComponentDetails object={object}/>
         </Flex>
     ); 
@@ -14,12 +14,12 @@ export const Component = ({ object }) => {
 export const Multicomponent = ({ object }) => {
     return (
         <Flex column gap={1.5} className="component">
-            {object.label}
+            <h2>{object.label}</h2>
             <p>{object.description}</p>
             {object.sections.map((el, i) => {
                 return( 
                     <span key={i}>
-                        {el.label}
+                       <h3>{el.label}</h3> 
                         <ComponentDetails object={el}/> 
                     </span>)
             })}

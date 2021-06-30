@@ -3,9 +3,9 @@ import { Drawer } from 'skylight-react';
 
 const DrawerProps = () => {
     return (
-        <div>
-           ??? 
-        </div>
+        <Drawer>
+            :~)
+        </Drawer>
     );
 }
  

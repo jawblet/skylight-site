@@ -1,5 +1,5 @@
 import { Component, Multicomponent } from '../pages/Component';
-
+ 
 export const COMPONENTS = [
   { 
     label: 'Card',
@@ -62,14 +62,6 @@ export const COMPONENTS = [
   path: 'toggle',
   component: 'ToggleProps',
   layout: Component,
-}
-];
-
-/*
-{ label: 'Panel',
-  path: 'panel',
-  component: 'ToggleProps',
-  layout: Component,
 },
 {
   label: 'Inputs + Textarea',
@@ -90,7 +82,7 @@ export const COMPONENTS = [
     },
     {
       label: 'Textarea',
-      component: 'TextAreaProps',
+      component: 'TextareaProps',
       description: 'Textarea for longer inputs. Uses the autosize library to resize on overflow.',
     }
   ]
@@ -100,6 +92,15 @@ export const COMPONENTS = [
   path: 'paginate',
   component: 'PaginateProps',
   layout: Component,
+}
+];
+
+/*
+{ label: 'Panel',
+  path: 'panel',
+  component: 'ToggleProps',
+  layout: Component,
 },
+
 
 */

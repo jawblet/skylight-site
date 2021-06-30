@@ -5,7 +5,7 @@ const VariantMenu = ({ items }) => {
     return (
         <Menu>
       {items.map(el => { 
-        return (<MenuItem link path={el.path}>
+        return (<MenuItem key={el.label} link path={el.path}>
                 {el.label}
             </MenuItem>)
                 })}
