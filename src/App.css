@@ -10,6 +10,10 @@
   padding: 3rem;
 }
 
+.component__demo {
+  min-height: 20rem;
+}
+
 /* STICKERS */
 .jawblia{
   position: absolute;

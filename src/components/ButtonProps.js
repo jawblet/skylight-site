@@ -8,12 +8,13 @@ const ButtonProps = () => {
     return( 
     <Flex gap={1}>
         <Button label="Inline" CTA={cta}/>
+        <Button label="Neutral" kind="neutral" CTA={cta}/>
         <Button label="Highlight" kind="highlight" CTA={cta}/>
         <Button label="Lowlight" kind="lowlight" CTA={cta}/>
         <Button label="Bright" kind="bright" CTA={cta}/>
         <Button label="Warning" kind="warning" CTA={cta}/>
     </Flex>
-    );
+    ); 
 }
  
 export default ButtonProps;
