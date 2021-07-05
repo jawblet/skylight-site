@@ -5,10 +5,10 @@ export default function useGetProps(label) {
     const [allProps, setAllProps] = useState(null);
     //set for component when page loads
     const [props, setProps] = useState(null);
-
+ 
     useEffect(() => {
         fetch('docs.json',{
-            headers : { 
+            headers : {
               'Content-Type': 'application/json',
               'Accept': 'application/json'
              }
@@ -28,7 +28,7 @@ export default function useGetProps(label) {
             const name = label.split(" ").map(el => el.charAt(0).toUpperCase() + el.slice(1)).join("");
             console.log(name);
             const obj = allProps.find(el => el.displayName === name);
-            if(!obj?.props) return null;
+            if(!obj || !obj.props) return null;
             console.log(Object.entries(obj.props));
             setProps(Object.entries(obj.props));
         }

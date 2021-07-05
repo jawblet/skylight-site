@@ -1,37 +1,36 @@
 import React from 'react';
-import { Flex } from 'skylight-react';
-import { AccentTag, SandTag, HighlightTag } from './Tag';
-
+import { Flex, Tag } from 'skylight-react';
+ 
 const PropsTable = ({ props }) => {
-
     return (
         <div className="props">
            {props && props.map((el, i) => { 
+               console.log(props);
                const name = el[0]
-               const dataType = el[1].type.name
-               const values = el[1].type.value?.map(el => el.value) // if enum 
+               const dataType = el[1].type?.name
+               const values = el[1].type?.value?.map(el => el.value) // if enum 
                const req = el[1].required
                const description = el[1].description
                const defaultValue = el[1].defaultValue?.value
 
                return (
-                <div key={i} style={{paddingBottom:"1rem"}}>
-                    <Flex middle gap={1} className="props__header">
-                        <AccentTag>
+                <div key={i} style={{paddingBottom:"1.5rem", paddingLeft:"1rem"}}>
+                    <Flex middle gap={1} className="padBottomS">
+                        <Tag style="highlight">
                             <code>{name}</code> 
-                        </AccentTag> 
-                        <SandTag>
+                        </Tag> 
+                        <Tag style="dark">
                             <code>{dataType}</code> 
-                        </SandTag>
-                       {values && <SandTag>
+                        </Tag>
+                       {values && <Tag>
                             <code>{values.join(' | ')}</code> 
-                        </SandTag>}
-                        {defaultValue && <HighlightTag>
+                        </Tag>}
+                        {defaultValue && <Tag style="lowlight">
                             <code>{defaultValue}</code> 
-                        </HighlightTag>}
+                        </Tag>}
                         {req && <h5 className="bold">Required</h5>}
                     </Flex>
-                    <p>{description}</p>
+                    <p className="light">{description}</p>
                 </div> 
                )
            })}

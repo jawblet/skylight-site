@@ -24,7 +24,7 @@ const Demo = ({ component }) => {
 
 const ComponentDetails = ({ object }) => {
     const { props } = useGetProps(object.label);
-
+ 
     return ( 
         <Flex column gap={1.5}>
             <Grid columns="5fr 1fr">
@@ -35,6 +35,7 @@ const ComponentDetails = ({ object }) => {
                     <VariantMenu items={object.variants}/>}
             </Grid>
                 <p>{object.description}</p>
+                <hr/>
                 {props && 
                     <PropsTable props={props}/>}
      </Flex>

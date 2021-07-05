@@ -13,11 +13,11 @@ export const COMPONENTS = [
     path: 'drawer', 
     component: 'DrawerProps', 
     layout: Component,
-    description: 'This dropdown is the base of menus, search results, notification lists, and other drawers positioned above other content.',
+    description: 'This dropdown is the base of menus, search results, notification lists, and other drawers absolutely positioned above other content.',
     variants: [{label: 'Flat', path: '#flat'}, {label: 'Shadow', path:'#shadow'}],
   }, 
 { 
-  label: 'Menu + MenuItem',
+  label: 'Menu and MenuItem',
   path: 'menu',
   description: 'The building blocks of all menus.',
   layout: Multicomponent,
@@ -40,7 +40,9 @@ export const COMPONENTS = [
   component: 'ButtonProps',
   layout: Component,
   description: 'Yeah the main button',
-  variants: [ {label: 'Call to action', path:'#cta'}] 
+  variants: [ 
+    {label: 'Default', path:'#default'},
+    {label: 'Call to action', path:'#cta'}] 
         }, 
   { 
   label: 'Icon Button',
@@ -64,15 +66,15 @@ export const COMPONENTS = [
   layout: Component,
 },
 {
-  label: 'Inputs + Textarea',
+  label: 'Inputs and Textarea',
   path: 'inputs',
   layout: Multicomponent,
   sections: [
     {
       label: 'Input',
       component: 'InputProps',
-      description: 'All props on the input component also apply to the <Password/> and <Textarea/> components. Additional props for those components are listed beneath them.',
       variants: [
+        {label: 'Default', path:'#default'}, 
         {label: 'Placeholder', path:'#placeholder'}, 
         {label: 'Labeled', path:'#label'}, 
         {label: 'Failed', path:'#fail'}, 
@@ -92,15 +94,56 @@ export const COMPONENTS = [
   path: 'paginate',
   component: 'PaginateProps',
   layout: Component,
+},
+{
+  label: 'Tag',
+  path: 'tag',
+  component: 'TagProps',
+  variants: [
+    {label: 'Default', path:'#default'},
+    {label: 'Chip', path:'#chip'}
+  ],
+  layout: Component,
+},
+{
+  label: 'Accordion menu',
+  path: 'accordion',
+  component: 'AccordionProps',
+  layout: Component,
+},
+{
+  label: 'Banner',
+  path: 'banner',
+  description: "A banner component for immediate feedback that times out after five seconds by default.",
+  variants: [
+    {label: 'Info', path:'#info'},
+    {label: 'Error', path:'#error'},
+    {label: 'Success', path:'#success'}
+  ],
+  component: 'BannerProps',
+  layout: Component,
 }
 ];
 
-/*
-{ label: 'Panel',
-  path: 'panel',
-  component: 'ToggleProps',
-  layout: Component,
-},
+export const UTILS = [
+  {
+    label: 'Flex',
+    path: 'flex',
+    component: 'FlexProps',
+    layout: Component,
+  },
+  {
+    label: 'Grid',
+    path: 'grid',
+    component: 'GridProps',
+    layout: Component,
+  }
+]
 
+export const CUSTOM = [
+  {
+    label: "Styles",
+    path: "styles"
+  }
+]
 
-*/

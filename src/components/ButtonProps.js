@@ -7,9 +7,10 @@ const ButtonProps = () => {
 
     return( 
     <Flex gap={1}>
-        <Button label="Fill" kind="fill" CTA={cta}/>
-        <Button label="Empty" kind="empty" CTA={cta}/>
-        <Button label="Active" kind="active" CTA={cta}/>
+        <Button label="Inline" CTA={cta}/>
+        <Button label="Highlight" kind="highlight" CTA={cta}/>
+        <Button label="Lowlight" kind="lowlight" CTA={cta}/>
+        <Button label="Bright" kind="bright" CTA={cta}/>
         <Button label="Warning" kind="warning" CTA={cta}/>
     </Flex>
     );

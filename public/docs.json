@@ -1,5 +1,79 @@
 {
-  "src/data/raw/Badge.js": {
+  "src/lib/components/Accordion/Accordion.js": {
+    "description": "",
+    "displayName": "Accordion",
+    "methods": [],
+    "props": {
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "src/lib/components/Accordion/AccordionDropdown.js": {
+    "description": "",
+    "displayName": "AccordionDropdown",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      }
+    }
+  },
+  "src/lib/components/Accordion/AccordionTitle.js": {
+    "description": "",
+    "displayName": "AccordionTitle",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Id to collapse/expand the correct panel"
+      },
+      "defaultChecked": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the panel is open or closed by default",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Children"
+      }
+    }
+  },
+  "src/lib/components/Badge/Badge.js": {
     "description": "",
     "displayName": "Badge",
     "methods": [],
@@ -23,253 +97,84 @@
           "name": "number"
         },
         "required": false,
-        "description": "Number to display in badge"
+        "description": "Number to display in badge",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
       }
     }
   },
-  "src/data/raw/Banner.js": {
+  "src/lib/components/Banner/Banner.js": {
     "description": "",
     "displayName": "Banner",
-    "methods": []
+    "methods": [],
+    "props": {
+      "in": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "Trigger banner entry"
+      },
+      "timeout": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Timeout in milliseconds before Banner disappears",
+        "defaultValue": {
+          "value": "5000",
+          "computed": false
+        }
+      },
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'info'",
+              "computed": false
+            },
+            {
+              "value": "'error'",
+              "computed": false
+            },
+            {
+              "value": "'success'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Banner type",
+        "defaultValue": {
+          "value": "\"info\"",
+          "computed": false
+        }
+      },
+      "text": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Banner text"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Styles"
+      }
+    }
   },
-  "src/data/raw/Breadcrumbs.js": {
+  "src/lib/components/Breadcrumbs.js": {
     "description": "",
     "displayName": "BreadCrumbs",
     "methods": []
   },
-  "src/data/raw/ButtonBar.js": {
-    "description": "",
-    "displayName": "ButtonBar",
-    "methods": []
-  },
-  "src/data/raw/Card.js": {
-    "description": "",
-    "displayName": "Card",
-    "methods": [],
-    "props": {
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Custom classname"
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Custom styles"
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "Component's children"
-      }
-    }
-  },
-  "src/data/raw/Checkbox.js": {
-    "description": "",
-    "displayName": "Checkbox",
-    "methods": []
-  },
-  "src/data/raw/Codeblock.js": {
-    "description": "",
-    "displayName": "Codeblock",
-    "methods": []
-  },
-  "src/data/raw/Drawer.js": {
-    "description": "",
-    "displayName": "Drawer",
-    "methods": [],
-    "props": {
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Custom classname"
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Custom styles"
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "Component's children"
-      }
-    }
-  },
-  "src/data/raw/DropdownY.js": {
-    "description": "",
-    "displayName": "DropdownY",
-    "methods": []
-  },
-  "src/data/raw/Loader.js": {
-    "description": "",
-    "displayName": "Loader",
-    "methods": [],
-    "props": {
-      "inline": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "Inline or full-page"
-      }
-    }
-  },
-  "src/data/raw/Notification.js": {
-    "description": "",
-    "displayName": "Notification",
-    "methods": []
-  },
-  "src/data/raw/Paginate.js": {
-    "description": "",
-    "displayName": "Paginate",
-    "methods": [],
-    "props": {
-      "page": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "Current page"
-      },
-      "totalPages": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "Total pages"
-      },
-      "prevPage": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": ""
-      },
-      "nextPage": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": ""
-      },
-      "handleClick": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Function to call onClick"
-      }
-    }
-  },
-  "src/data/raw/Post.js": {
-    "description": "",
-    "displayName": "Post",
-    "methods": []
-  },
-  "src/data/raw/Prompt.js": {
-    "description": "",
-    "displayName": "Prompt",
-    "methods": []
-  },
-  "src/data/raw/Tooltip.js": {
-    "description": "",
-    "displayName": "Tooltip",
-    "methods": []
-  },
-  "src/data/raw/animate/Blur.js": {
-    "description": "",
-    "displayName": "Blur",
-    "methods": []
-  },
-  "src/data/raw/animate/DropdownY.js": {
-    "description": "",
-    "displayName": "DropdownY",
-    "methods": []
-  },
-  "src/data/raw/animate/Fade.js": {
-    "description": "",
-    "displayName": "Fade",
-    "methods": []
-  },
-  "src/data/raw/animate/Rolldown.js": {
-    "description": "",
-    "displayName": "Rolldown",
-    "methods": []
-  },
-  "src/data/raw/animate/Slide.js": {
-    "description": "",
-    "displayName": "Slide",
-    "methods": []
-  },
-  "src/data/raw/animate/SwitchFade.js": {
-    "description": "",
-    "displayName": "SwitchFade",
-    "methods": []
-  },
-  "src/data/raw/animate/SwitchSlide.js": {
-    "description": "",
-    "displayName": "SwitchSlide",
-    "methods": []
-  },
-  "src/data/raw/atoms/Anchor.js": {
-    "description": "",
-    "displayName": "Anchor",
-    "methods": []
-  },
-  "src/data/raw/atoms/Blur.js": {
-    "description": "",
-    "displayName": "Blur",
-    "methods": []
-  },
-  "src/data/raw/atoms/CloseButton.js": {
-    "description": "",
-    "displayName": "CloseButton",
-    "methods": []
-  },
-  "src/data/raw/atoms/Footer.js": {
-    "description": "",
-    "displayName": "Footer",
-    "methods": []
-  },
-  "src/data/raw/atoms/Line.js": {
-    "description": "",
-    "displayName": "Line",
-    "methods": []
-  },
-  "src/data/raw/atoms/ReadMore.js": {
-    "description": "",
-    "displayName": "ReadMore",
-    "methods": []
-  },
-  "src/data/raw/atoms/ShowPass.js": {
-    "description": "",
-    "displayName": "ShowPass",
-    "methods": []
-  },
-  "src/data/raw/atoms/Tree.js": {
-    "description": "",
-    "displayName": "Tree",
-    "methods": []
-  },
-  "src/data/raw/atoms/TreeBranches.js": {
-    "description": "",
-    "displayName": "TreeBranches",
-    "methods": []
-  },
-  "src/data/raw/btn/Button.js": {
+  "src/lib/components/Button/Button.js": {
     "description": "",
     "displayName": "Button",
     "methods": [],
@@ -281,6 +186,125 @@
         "required": true,
         "description": "Button label"
       },
+      "kind": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'highlight'",
+              "computed": false
+            },
+            {
+              "value": "'lowlight'",
+              "computed": false
+            },
+            {
+              "value": "'bright'",
+              "computed": false
+            },
+            {
+              "value": "'neutral'",
+              "computed": false
+            },
+            {
+              "value": "'empty'",
+              "computed": false
+            },
+            {
+              "value": "'warning'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Kind of button style",
+        "defaultValue": {
+          "value": "\"inline\"",
+          "computed": false
+        }
+      },
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"button\"",
+              "computed": false
+            },
+            {
+              "value": "\"submit\"",
+              "computed": false
+            },
+            {
+              "value": "\"reset\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Function of button",
+        "defaultValue": {
+          "value": "\"button\"",
+          "computed": false
+        }
+      },
+      "CTA": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "CTA (Call To Action) buttons that prompt big actions have a rounder style",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disabled state",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Data id"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      }
+    }
+  },
+  "src/lib/components/Button/IconButton.js": {
+    "description": "",
+    "displayName": "IconButton",
+    "methods": [],
+    "props": {
       "kind": {
         "type": {
           "name": "enum",
@@ -335,23 +359,26 @@
           "computed": false
         }
       },
-      "CTA": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "If the button is a Call To Action, it will be rounder",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
       "handleClick": {
         "type": {
           "name": "func"
         },
         "required": false,
         "description": "Function to call onClick"
+      },
+      "handleMouseEnter": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call oneMouseEnter"
+      },
+      "handleMouseLeave": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call oneMouseLeave"
       },
       "disabled": {
         "type": {
@@ -384,35 +411,83 @@
         },
         "required": false,
         "description": "Custom styles"
+      },
+      "CTA": {
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        },
+        "required": false
       }
     }
   },
-  "src/data/raw/btn/IconButton.js": {
+  "src/lib/components/Card/Card.js": {
     "description": "",
-    "displayName": "IconButton",
+    "displayName": "Card",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Component's children"
+      }
+    }
+  },
+  "src/lib/components/Checkbox.js": {
+    "description": "",
+    "displayName": "Checkbox",
     "methods": []
   },
-  "src/data/raw/btn/Toggle.js": {
+  "src/lib/components/Drawer/Drawer.js": {
     "description": "",
-    "displayName": "Toggle",
+    "displayName": "Drawer",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Component's children"
+      }
+    }
+  },
+  "src/lib/components/DropdownY.js": {
+    "description": "",
+    "displayName": "DropdownY",
     "methods": []
   },
-  "src/data/raw/editor/EditorTitle.js": {
-    "description": "",
-    "displayName": "EditorTitle",
-    "methods": []
-  },
-  "src/data/raw/editor/RichEditor.js": {
-    "description": "",
-    "displayName": "RichEditor",
-    "methods": []
-  },
-  "src/data/raw/editor/Toolbar.js": {
-    "description": "",
-    "displayName": "Toolbar",
-    "methods": []
-  },
-  "src/data/raw/input/Input.js": {
+  "src/lib/components/Input/Input.js": {
     "description": "",
     "displayName": "Input",
     "methods": [],
@@ -421,7 +496,7 @@
         "type": {
           "name": "string"
         },
-        "required": true,
+        "required": false,
         "description": "Textarea label"
       },
       "inline": {
@@ -452,6 +527,13 @@
         "required": false,
         "description": "Name"
       },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Value"
+      },
       "placeholder": {
         "type": {
           "name": "string"
@@ -466,16 +548,19 @@
         "required": false,
         "description": "Disabled state"
       },
-      "showPass": {
+      "readOnly": {
         "type": {
           "name": "bool"
         },
         "required": false,
-        "description": "Show password",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
+        "description": "Read-only state"
+      },
+      "autofocus": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If input autofocuses"
       },
       "handleClick": {
         "type": {
@@ -512,6 +597,17 @@
         "required": false,
         "description": "Custom classname"
       },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Width",
+        "defaultValue": {
+          "value": "\"100%\"",
+          "computed": false
+        }
+      },
       "style": {
         "type": {
           "name": "object"
@@ -521,12 +617,12 @@
       }
     }
   },
-  "src/data/raw/input/Password.js": {
+  "src/lib/components/Input/Password.js": {
     "description": "",
     "displayName": "Password",
     "methods": []
   },
-  "src/data/raw/input/Textarea.js": {
+  "src/lib/components/Input/Textarea.js": {
     "description": "",
     "displayName": "Textarea",
     "methods": [],
@@ -535,7 +631,7 @@
         "type": {
           "name": "string"
         },
-        "required": true,
+        "required": false,
         "description": "Textarea label"
       },
       "inline": {
@@ -570,6 +666,13 @@
         "required": false,
         "description": "Name"
       },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Value"
+      },
       "placeholder": {
         "type": {
           "name": "string"
@@ -583,6 +686,13 @@
         },
         "required": false,
         "description": "Disabled state"
+      },
+      "readOnly": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Read-only state"
       },
       "handleClick": {
         "type": {
@@ -619,6 +729,13 @@
         "required": false,
         "description": "Custom classname"
       },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Width"
+      },
       "style": {
         "type": {
           "name": "object"
@@ -628,28 +745,22 @@
       }
     }
   },
-  "src/data/raw/layout/Flex.js": {
+  "src/lib/components/Loader/Loader.js": {
     "description": "",
-    "displayName": "Flex",
-    "methods": []
+    "displayName": "Loader",
+    "methods": [],
+    "props": {
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Inline or full-page"
+      }
+    }
   },
-  "src/data/raw/layout/Form.js": {
+  "src/lib/components/Menu/Menu.js": {
     "description": "",
-    "displayName": "Form",
-    "methods": []
-  },
-  "src/data/raw/layout/Grid.js": {
-    "description": "",
-    "displayName": "Grid",
-    "methods": []
-  },
-  "src/data/raw/layout/TitledPage.js": {
-    "description": "",
-    "displayName": "TitledPage",
-    "methods": []
-  },
-  "src/data/raw/menu/Menu.js": {
-    "description": "A very simple menu that wraps around items.",
     "displayName": "Menu",
     "methods": [],
     "props": {
@@ -676,7 +787,7 @@
       }
     }
   },
-  "src/data/raw/menu/MenuItem.js": {
+  "src/lib/components/Menu/MenuItem.js": {
     "description": "",
     "displayName": "MenuItem",
     "methods": [],
@@ -716,12 +827,12 @@
         "required": false,
         "description": "Function to call onClick"
       },
-      "id": {
+      "value": {
         "type": {
           "name": "node"
         },
         "required": false,
-        "description": "Data id"
+        "description": "Component value"
       },
       "className": {
         "type": {
@@ -746,81 +857,540 @@
       }
     }
   },
-  "src/data/raw/menu/SelectMenu.js": {
+  "src/lib/components/Notification.js": {
     "description": "",
-    "displayName": "SelectMenu",
+    "displayName": "Notification",
     "methods": []
   },
-  "src/data/raw/menu/accordion/AccordionMenu.js": {
+  "src/lib/components/Paginate/Paginate.js": {
     "description": "",
-    "displayName": "AccordionMenu",
+    "displayName": "Paginate",
     "methods": [],
     "props": {
-      "panels": {
+      "page": {
         "type": {
-          "name": "shape",
-          "value": {
-            "label": {
-              "name": "string",
-              "required": true
-            },
-            "items": {
-              "name": "array",
-              "required": true
-            },
-            "checked": {
-              "name": "bool",
-              "required": false
-            }
-          }
+          "name": "number"
+        },
+        "required": true,
+        "description": "Current page"
+      },
+      "totalPages": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Total pages"
+      },
+      "prevPage": {
+        "type": {
+          "name": "bool"
         },
         "required": false,
-        "description": "",
-        "defaultValue": {
-          "value": "{ \n    checked: true\n}",
-          "computed": false
-        }
+        "description": "If the previous page exists"
+      },
+      "nextPage": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the next page exists"
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
       }
     }
   },
-  "src/data/raw/menu/accordion/AccordionPanel.js": {
+  "src/lib/components/Post.js": {
     "description": "",
-    "displayName": "AccordionPanel",
+    "displayName": "Post",
     "methods": []
   },
-  "src/data/raw/panel/Panel.js": {
+  "src/lib/components/Tag/Tag.js": {
     "description": "",
-    "displayName": "Panel",
+    "displayName": "Tag",
+    "methods": [],
+    "props": {
+      "bg": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Background color"
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Color"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Children"
+      },
+      "kind": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'highlight'",
+              "computed": false
+            },
+            {
+              "value": "'lowlight'",
+              "computed": false
+            },
+            {
+              "value": "'neutral'",
+              "computed": false
+            },
+            {
+              "value": "'dark'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Kind of tag style"
+      },
+      "chip": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the tag is a chip"
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "style": {
+        "defaultValue": {
+          "value": "'neutral'",
+          "computed": false
+        },
+        "required": false
+      }
+    }
+  },
+  "src/lib/components/Tag/TagPreview.js": {
+    "description": "",
+    "displayName": "TagPreview",
     "methods": []
   },
-  "src/data/raw/panel/PanelDropdown.js": {
+  "src/lib/components/Toggle/Toggle.js": {
     "description": "",
-    "displayName": "PanelDropdown",
+    "displayName": "Toggle",
+    "methods": [],
+    "props": {
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Toggle label"
+      },
+      "checked": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Initial checked state",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disabled state"
+      }
+    }
+  },
+  "src/lib/components/Tooltip.js": {
+    "description": "",
+    "displayName": "Tooltip",
     "methods": []
   },
-  "src/data/raw/panel/PanelTitle.js": {
+  "src/lib/components/animate/Blur.js": {
     "description": "",
-    "displayName": "PanelTitle",
+    "displayName": "Blur",
     "methods": []
   },
-  "src/data/raw/table/Cell.js": {
+  "src/lib/components/animate/DropdownY.js": {
+    "description": "",
+    "displayName": "DropdownY",
+    "methods": []
+  },
+  "src/lib/components/animate/Fade.js": {
+    "description": "",
+    "displayName": "Fade",
+    "methods": []
+  },
+  "src/lib/components/animate/Rolldown.js": {
+    "description": "",
+    "displayName": "Rolldown",
+    "methods": []
+  },
+  "src/lib/components/animate/Slide.js": {
+    "description": "",
+    "displayName": "Slide",
+    "methods": []
+  },
+  "src/lib/components/animate/SwitchFade.js": {
+    "description": "",
+    "displayName": "SwitchFade",
+    "methods": []
+  },
+  "src/lib/components/animate/SwitchSlide.js": {
+    "description": "",
+    "displayName": "SwitchSlide",
+    "methods": []
+  },
+  "src/lib/components/atoms/Anchor.js": {
+    "description": "",
+    "displayName": "Anchor",
+    "methods": []
+  },
+  "src/lib/components/atoms/Blur.js": {
+    "description": "",
+    "displayName": "Blur",
+    "methods": []
+  },
+  "src/lib/components/atoms/CloseButton.js": {
+    "description": "",
+    "displayName": "CloseButton",
+    "methods": []
+  },
+  "src/lib/components/atoms/Footer.js": {
+    "description": "",
+    "displayName": "Footer",
+    "methods": []
+  },
+  "src/lib/components/atoms/Line.js": {
+    "description": "",
+    "displayName": "Line",
+    "methods": []
+  },
+  "src/lib/components/atoms/ShowPass.js": {
+    "description": "",
+    "displayName": "ShowPass",
+    "methods": []
+  },
+  "src/lib/components/layout/Flex.js": {
+    "description": "",
+    "displayName": "Flex",
+    "methods": [],
+    "props": {
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Flex or inline-flex",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "column": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Row or column",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "wrap": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Wrap or no wrap",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "left": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Justify-content: start"
+      },
+      "center": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Justify-content: center"
+      },
+      "right": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Justify-content: right"
+      },
+      "between": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Justify-content: space-between"
+      },
+      "around": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Justify-content: space-around"
+      },
+      "top": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Align-items: start"
+      },
+      "middle": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Align-items: center"
+      },
+      "bottom": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Align-items: end"
+      },
+      "gap": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Gap",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "height": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Height"
+      },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Width"
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to call onClick"
+      },
+      "id": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Data id"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      }
+    }
+  },
+  "src/lib/components/layout/Form.js": {
+    "description": "",
+    "displayName": "Form",
+    "methods": []
+  },
+  "src/lib/components/layout/Grid.js": {
+    "description": "",
+    "displayName": "Grid",
+    "methods": [],
+    "props": {
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Grid or inline-grid",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "columns": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Columns, ex. \"minmax(10px, 1fr) 3fr\", \"repeat(5, 1fr)\"",
+        "defaultValue": {
+          "value": "\"none\"",
+          "computed": false
+        }
+      },
+      "rows": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Rows, ex. \"min-content 1fr min-content\", \"15rem 1fr\"",
+        "defaultValue": {
+          "value": "\"none\"",
+          "computed": false
+        }
+      },
+      "justify": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'start'",
+              "computed": false
+            },
+            {
+              "value": "'end'",
+              "computed": false
+            },
+            {
+              "value": "'center'",
+              "computed": false
+            },
+            {
+              "value": "'stretch'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Align items along grid main axis",
+        "defaultValue": {
+          "value": "\"stretch\"",
+          "computed": false
+        }
+      },
+      "align": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'start'",
+              "computed": false
+            },
+            {
+              "value": "'end'",
+              "computed": false
+            },
+            {
+              "value": "'center'",
+              "computed": false
+            },
+            {
+              "value": "'stretch'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Align items along grid cross axis",
+        "defaultValue": {
+          "value": "\"stretch\"",
+          "computed": false
+        }
+      },
+      "gap": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Gap",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Width",
+        "defaultValue": {
+          "value": "\"100%\"",
+          "computed": false
+        }
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      }
+    }
+  },
+  "src/lib/components/table/Cell.js": {
     "description": "",
     "displayName": "Cell",
     "methods": []
   },
-  "src/data/raw/table/Table.js": {
+  "src/lib/components/table/Table.js": {
     "description": "",
     "displayName": "Table",
     "methods": []
   },
-  "src/data/raw/table/TableHeader.js": {
+  "src/lib/components/table/TableHeader.js": {
     "description": "",
     "displayName": "TableHeader",
-    "methods": []
-  },
-  "src/data/raw/tag/TagPreview.js": {
-    "description": "",
-    "displayName": "TagPreview",
     "methods": []
   }
 }

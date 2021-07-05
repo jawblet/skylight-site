@@ -1,40 +1,40 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { Menu, MenuItem, Grid } from 'skylight-react';
-import { COMPONENTS } from './data/components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Grid } from 'skylight-react';
+import { COMPONENTS, UTILS } from './data/components';
 import Home from './pages/Home';
+import Header from './sections/Header';
+import SideMenu from './sections/Home/SideMenu';
+import Styles from './pages/Styles';
+import './App.css';
+import 'skylight-react/dist/skylight.css'
 
 function App() {
   return (
       <Router>
         <div className="App">
-        <Link to="/">
-          <h1>Home</h1>
-        </Link>
-        <Grid columns="15rem 1fr">
-          <Menu>
-            {COMPONENTS.map(el => {
-            return (<MenuItem key={el.path} nav path={el.path}>
-              {el.label}
-              </MenuItem>)
-            })}
-          </Menu>
+        <Header/>
+        <Grid columns="15rem 1fr" gap={3}>
+          <SideMenu/>
+          <div>
             <Switch>
-              {COMPONENTS.map(({layout: Layout, ...c}) => {
-                return(
-                  <Route key={c.path}
-                        path={`/${c.path}`}
-                        render={(props) => <Layout object={c} {...props}/>
-                      }/>)
-                    })}
-                <Route exact path="/" component={Home}/>
-            </Switch>
-        </Grid>
-      </div>
+                {[...COMPONENTS, ...UTILS].map(({layout: Layout, ...c}) => {
+                  return(
+                    <Route key={c.path}
+                          path={`/${c.path}`}
+                          render={(props) => <Layout object={c} {...props}/>
+                        }/>)
+                      })}
+                  <Route path="/styles" component={Styles}/>
+                  <Route exact path="/" component={Home}/>
+              </Switch>
+          </div>
+          </Grid>
+        </div>
       </Router>
   );
 }
 
 export default App;
 
+//import slugify from 'react-slugify';

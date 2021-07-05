@@ -1,13 +1,70 @@
 .App {
-    margin: 1.5rem;
+    padding: 1.5rem;
+    background: var(--sand);
+    min-height: 100vh;
 }
 
-html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 90%;
+.component {
+  background: var(--off-white);
+  border-radius: 1rem;
+  padding: 3rem;
 }
 
-code {
-    font-family: Consolas, monaco, monospace;
-    font-size: 80%;
+/* STICKERS */
+.jawblia{
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  transform: rotate(-3deg);
+}
+
+.jawblia__back{
+  fill: var(--acc1-light);
+ }
+
+.jawblia__text{
+  stroke: var(--acc1-dark);
+}
+
+.jawblia__border{
+   stroke: var(--acc1-dark);
+}
+
+.github{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  transform: rotate(5deg);
+}
+.github__back {
+  fill: var(--acc2-light);
+}
+
+.github__text {
+  fill: var(--acc2-dark);
+}
+
+.skylight {
+  position: absolute;
+  top: 1rem;
+  right: 10rem;
+  z-index: 3;
+}
+
+.skylight__back {
+  fill: var(--acc1-dark);
+}
+
+.skylight__text {
+  fill: var(--bright);
+}
+
+.skylight__sun {
+  fill: var(--bright);
+}
+
+.padI {
+  border-radius: 3px;
+  padding: 1px 3px;
 }
