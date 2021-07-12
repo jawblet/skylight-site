@@ -14,18 +14,18 @@ const PropsTable = ({ props }) => {
                const defaultValue = el[1].defaultValue?.value
 
                return (
-                <div key={i} style={{paddingBottom:"1.5rem", paddingLeft:"1rem"}}>
+                <div key={i} style={{paddingBottom:"3rem", paddingLeft:"1rem"}}>
                     <Flex middle gap={1} className="padBottomS">
-                        <Tag style="highlight">
+                        <Tag kind="highlight">
                             <code>{name}</code> 
                         </Tag> 
-                        <Tag style="dark">
+                        <Tag kind="dark">
                             <code>{dataType}</code> 
                         </Tag>
                        {values && <Tag>
                             <code>{values.join(' | ')}</code> 
                         </Tag>}
-                        {defaultValue && <Tag style="lowlight">
+                        {defaultValue && <Tag kind="lowlight">
                             <code>{defaultValue}</code> 
                         </Tag>}
                         {req && <h5 className="bold">Required</h5>}

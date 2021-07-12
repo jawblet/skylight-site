@@ -6,9 +6,10 @@ import Home from './pages/Home';
 import Header from './sections/Header';
 import SideMenu from './sections/Home/SideMenu';
 import Styles from './pages/Styles';
+import Useful from './pages/Useful';
 import './App.css';
 import 'skylight-react/dist/skylight.css'
-
+ 
 function App() {
   return (
       <Router>
@@ -26,6 +27,7 @@ function App() {
                         }/>)
                       })}
                   <Route path="/styles" component={Styles}/>
+                  <Route path="/useful" component={Useful}/>
                   <Route exact path="/" component={Home}/>
               </Switch>
           </div>
@@ -36,5 +38,3 @@ function App() {
 }
 
 export default App;
-
-//import slugify from 'react-slugify';

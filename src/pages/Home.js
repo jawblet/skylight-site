@@ -5,7 +5,7 @@ import { Flex } from 'skylight-react';
 const Home = () => {
     return (
         <div>
-            <Flex height="10rem" className="marBottomL">
+            <Flex height="10rem" className="marL">
                 <div style={{flex:"50%", alignSelf:"center"}}>
                     <h1>skylight-react</h1>
                 </div>
@@ -24,7 +24,8 @@ const Home = () => {
             <Flex column gap={1.5}>
                 <h2>skylight-react is a personal component library WIP</h2>
                     <p>
-                        install with <code className="dark padI">npm install skylight-react</code> or <a href="">fork it</a>.
+                        install with <code className="dark padI">npm install skylight-react</code> or 
+                        <a href="https://github.com/jawblia/skylight"> fork it</a>.
                     </p>
             </Flex>
         </div>

@@ -10,13 +10,13 @@ const TagProps = () => {
             <Tag chip={chip}>
                 Facts
             </Tag>
-            <Tag style="highlight" chip={chip}>
+            <Tag kind="highlight" chip={chip}>
                 Lies
             </Tag>
-            <Tag style="lowlight" chip={chip}>
+            <Tag kind="lowlight" chip={chip}>
                 Fiction
             </Tag>
-            <Tag style="dark" chip={chip}>
+            <Tag kind="dark" chip={chip}>
                 Fiction
             </Tag>
         </Flex>

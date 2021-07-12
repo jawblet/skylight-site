@@ -15,23 +15,28 @@
 }
 
 /* STICKERS */
-.jawblia{
+.jawblia {
   position: absolute;
   top: 3rem;
   right: 1rem;
   transform: rotate(-3deg);
+  transition: transform 0.35s;
+}
+
+.jawblia:hover{
+  transform: rotate(-8deg);
 }
 
 .jawblia__back{
-  fill: var(--acc1-light);
+  fill: var(--forest-h);
  }
 
 .jawblia__text{
-  stroke: var(--acc1-dark);
+  stroke: var(--forest);
 }
 
 .jawblia__border{
-   stroke: var(--acc1-dark);
+   stroke: var(--forest);
 }
 
 .github{
@@ -40,13 +45,19 @@
   right: 1rem;
   z-index: 2;
   transform: rotate(5deg);
+  transition: transform 0.35s;
 }
+
+.github:hover{
+  transform: rotate(0deg);
+}
+
 .github__back {
-  fill: var(--acc2-light);
+  fill: var(--purple-h);
 }
 
 .github__text {
-  fill: var(--acc2-dark);
+  fill: var(--purple);
 }
 
 .skylight {
@@ -54,21 +65,35 @@
   top: 1rem;
   right: 10rem;
   z-index: 3;
+  transition: transform 0.35s;
+}
+
+.skylight:hover{
+  transform: rotate(-30deg);
 }
 
 .skylight__back {
-  fill: var(--acc1-dark);
+  fill: var(--forest);
 }
 
 .skylight__text {
-  fill: var(--bright);
+  fill: var(--green-h);
 }
 
 .skylight__sun {
-  fill: var(--bright);
+  fill: var(--green-h);
 }
 
-.padI {
-  border-radius: 3px;
-  padding: 1px 3px;
+.codeblock {
+  padding: 1rem;
+  background: var(--body);
+  border-radius: 0.5rem;
+}
+
+code, pre {
+  white-space: pre-wrap;
+	word-spacing: normal;
+	word-break: break-word;
+	word-wrap: normal;
+	line-height: 1.5;
 }

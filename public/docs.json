@@ -169,7 +169,7 @@
       }
     }
   },
-  "src/lib/components/Breadcrumbs.js": {
+  "src/lib/components/Breadcrumbs/Breadcrumbs.js": {
     "description": "",
     "displayName": "BreadCrumbs",
     "methods": []
@@ -411,15 +411,13 @@
         },
         "required": false,
         "description": "Custom styles"
-      },
-      "CTA": {
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        },
-        "required": false
       }
     }
+  },
+  "src/lib/components/ButtonBar/ButtonBar.js": {
+    "description": "",
+    "displayName": "ButtonBar",
+    "methods": []
   },
   "src/lib/components/Card/Card.js": {
     "description": "",
@@ -449,10 +447,65 @@
       }
     }
   },
-  "src/lib/components/Checkbox.js": {
+  "src/lib/components/Checkbox/Checkbox.js": {
     "description": "",
     "displayName": "Checkbox",
-    "methods": []
+    "methods": [],
+    "props": {
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Box label"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Checkbox and label id"
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Value"
+      },
+      "checked": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the default state is checked or not",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disabled state"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
+      }
+    }
   },
   "src/lib/components/Drawer/Drawer.js": {
     "description": "",
@@ -481,11 +534,6 @@
         "description": "Component's children"
       }
     }
-  },
-  "src/lib/components/DropdownY.js": {
-    "description": "",
-    "displayName": "DropdownY",
-    "methods": []
   },
   "src/lib/components/Input/Input.js": {
     "description": "",
@@ -857,6 +905,27 @@
       }
     }
   },
+  "src/lib/components/Modal/Modal.js": {
+    "description": "",
+    "displayName": "Modal",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The modal contents"
+      },
+      "handleClose": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Handle closing the modal"
+      }
+    }
+  },
   "src/lib/components/Notification.js": {
     "description": "",
     "displayName": "Notification",
@@ -903,11 +972,6 @@
         "description": "Function to call onClick"
       }
     }
-  },
-  "src/lib/components/Post.js": {
-    "description": "",
-    "displayName": "Post",
-    "methods": []
   },
   "src/lib/components/Tag/Tag.js": {
     "description": "",
@@ -958,7 +1022,11 @@
           ]
         },
         "required": false,
-        "description": "Kind of tag style"
+        "description": "Kind of tag style",
+        "defaultValue": {
+          "value": "'neutral'",
+          "computed": false
+        }
       },
       "chip": {
         "type": {
@@ -973,13 +1041,6 @@
         },
         "required": false,
         "description": "Function to call onClick"
-      },
-      "style": {
-        "defaultValue": {
-          "value": "'neutral'",
-          "computed": false
-        },
-        "required": false
       }
     }
   },
@@ -1261,33 +1322,21 @@
           "name": "bool"
         },
         "required": false,
-        "description": "Grid or inline-grid",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
+        "description": "Grid or inline-grid"
       },
       "columns": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "Columns, ex. \"minmax(10px, 1fr) 3fr\", \"repeat(5, 1fr)\"",
-        "defaultValue": {
-          "value": "\"none\"",
-          "computed": false
-        }
+        "description": "Columns, ex. \"minmax(10px, 1fr) 3fr\", \"repeat(5, 1fr)\""
       },
       "rows": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "Rows, ex. \"min-content 1fr min-content\", \"15rem 1fr\"",
-        "defaultValue": {
-          "value": "\"none\"",
-          "computed": false
-        }
+        "description": "Rows, ex. \"min-content 1fr min-content\", \"15rem 1fr\""
       },
       "justify": {
         "type": {
@@ -1312,11 +1361,7 @@
           ]
         },
         "required": false,
-        "description": "Align items along grid main axis",
-        "defaultValue": {
-          "value": "\"stretch\"",
-          "computed": false
-        }
+        "description": "Align items along grid main axis"
       },
       "align": {
         "type": {
@@ -1341,33 +1386,21 @@
           ]
         },
         "required": false,
-        "description": "Align items along grid cross axis",
-        "defaultValue": {
-          "value": "\"stretch\"",
-          "computed": false
-        }
+        "description": "Align items along grid cross axis"
       },
       "gap": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "Gap",
-        "defaultValue": {
-          "value": "0",
-          "computed": false
-        }
+        "description": "Gap"
       },
       "width": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "Width",
-        "defaultValue": {
-          "value": "\"100%\"",
-          "computed": false
-        }
+        "description": "Width"
       },
       "className": {
         "type": {
@@ -1377,20 +1410,5 @@
         "description": "Custom classname"
       }
     }
-  },
-  "src/lib/components/table/Cell.js": {
-    "description": "",
-    "displayName": "Cell",
-    "methods": []
-  },
-  "src/lib/components/table/Table.js": {
-    "description": "",
-    "displayName": "Table",
-    "methods": []
-  },
-  "src/lib/components/table/TableHeader.js": {
-    "description": "",
-    "displayName": "TableHeader",
-    "methods": []
   }
 }

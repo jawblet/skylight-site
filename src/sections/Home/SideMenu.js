@@ -15,7 +15,7 @@ const SideMenu = () => {
         </Menu>
         <Menu>
         <h4>utilities + styles</h4>
-          {[...UTILS].map(el => {
+          {[...UTILS, ...CUSTOM].map(el => {
           return (<MenuItem key={el.path} nav path={el.path}>
             {el.label}
             </MenuItem>)

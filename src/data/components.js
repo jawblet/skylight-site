@@ -43,7 +43,7 @@ export const COMPONENTS = [
   variants: [ 
     {label: 'Default', path:'#default'},
     {label: 'Call to action', path:'#cta'}] 
-        }, 
+    }, 
   { 
   label: 'Icon Button',
   path: 'icon-button',
@@ -54,6 +54,16 @@ export const COMPONENTS = [
     {label: 'Inline', path:'#inline'}, 
     {label: 'Warning', path:'#warning'} ]
 },  
+{ 
+  label: 'Button Bar',
+  path: 'buttonbar',
+  component: 'ButtonBarProps',
+  layout: Component,
+  description: '',
+  variants: [ 
+    {label: 'Row', path:'#row'},
+    {label: 'Column', path:'#column'}] 
+    }, 
 {
   label: 'Loader',
   path: 'loader',
@@ -122,6 +132,18 @@ export const COMPONENTS = [
   ],
   component: 'BannerProps',
   layout: Component,
+},
+{
+  label: 'Checkbox',
+  path: 'checkbox',
+  component: 'CheckboxProps',
+  layout: Component
+},
+{
+  label: 'Modal',
+  path: 'modal',
+  component: 'ModalProps',
+  layout: Component
 }
 ];
 
@@ -144,6 +166,10 @@ export const CUSTOM = [
   {
     label: "Styles",
     path: "styles"
+  },
+  {
+    label: "Useful",
+    path: "useful"
   }
 ]
 

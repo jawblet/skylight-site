@@ -10565,10 +10565,10 @@
   "resolved" "https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz"
   "version" "1.0.5"
 
-"skylight-react@^0.9.4":
-  "integrity" "sha512-34JGPm/O1qMLko4N8WXgg1Eq2v19Z01Ejb/WMR0IhWOHuhEJE0T6tFRymbM2HVF0b4oOPSkb4hk/gyaDVlDzlA=="
-  "resolved" "https://registry.npmjs.org/skylight-react/-/skylight-react-0.9.4.tgz"
-  "version" "0.9.4"
+"skylight-react@^0.9.8":
+  "integrity" "sha512-fgWAjx3kWWqp6BljaB+jlShEnDNzhRHPYk+dxpHmreHT1W1/FnVnS9WwM2docRvmQdFjCBYppUWyQNtc/S/Kfw=="
+  "resolved" "https://registry.npmjs.org/skylight-react/-/skylight-react-0.9.8.tgz"
+  "version" "0.9.8"
   dependencies:
     "@testing-library/jest-dom" "^5.11.4"
     "@testing-library/react" "^11.1.0"
