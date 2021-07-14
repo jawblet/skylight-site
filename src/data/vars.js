@@ -1,5 +1,5 @@
-export const COLORS = [
-   { base: [ 
+export const BASE_COLORS = [
+  { base: [ 
     '--off-white',
     '--sand',
     '--sand2',
@@ -9,56 +9,71 @@ export const COLORS = [
     '--body',
     '--body-medium',
     '--body-light',
-    '--body-lightest']},
+    '--body-lightest']
+  }
+]
+
+export const COLORS = [
     { brown: [
       '--brown-h',
     '--brown-l',
     '--brown',
+    '',
     ]},
     { red: [
       '--red-h',
     '--red-l',
     '--red',
+    ''
+  
     ]},
     { orange: [
       '--orange-h',
     '--orange-l',
     '--orange',
+    ''
     ]},
     { yellow: [
       '--yellow-h',
     '--yellow-l',
     '--yellow',
+    ''
     ]},
     { green: [
       '--green-h',
     '--green-l',
     '--green',
+    ''
     ]},
     { forest: [
       '--forest-h',
     '--forest-l',
     '--forest',
+    ''
     ]},
     { blue: [
       '--blue-h',
     '--blue-l',
     '--blue',
+    ''
     ]},
     { purple: [
       '--purple-h',
     '--purple-l',
     '--purple',
+    ''
     ]},
     { eggplant: [
       '--eggplant-h',
     '--eggplant-l',
     '--eggplant',
+    ''
     ]},
     { pink: [
       '--pink-h',
     '--pink-l',
     '--pink',
+    ''
     ]},
     
   ]

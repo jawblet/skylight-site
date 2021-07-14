@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import VariantMenu from './VariantMenu';
 import { Flex, Grid } from 'skylight-react';
-import useGetProps from '../../hooks/useGetProps';
-import PropsTable from '../PropsTable';
+import ComponentInfo from './ComponentInfo';
 
 const getComponent = component => 
     lazy(() => 
@@ -14,7 +13,6 @@ const getComponent = component =>
 
 const Demo = ({ component }) => {
     const Example = getComponent(component);
-
     return (
         <Suspense fallback={<p>...</p>}>
             <Example/>
@@ -23,8 +21,6 @@ const Demo = ({ component }) => {
 }
 
 const ComponentDetails = ({ object }) => {
-    const { props } = useGetProps(object.label);
- 
     return ( 
         <Flex column gap={1.5}>
             <Grid columns="5fr 1fr">
@@ -35,9 +31,7 @@ const ComponentDetails = ({ object }) => {
                     <VariantMenu items={object.variants}/>}
             </Grid>
                 <p>{object.description}</p>
-                <hr/>
-                {props && 
-                    <PropsTable props={props}/>}
+            <ComponentInfo label={object.label}/>
      </Flex>
     );
 }

@@ -2474,6 +2474,11 @@
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.2.2"
 
+"babel-plugin-prismjs@^2.1.0":
+  "integrity" "sha512-ehzSKYfeAz4U78zi/sfwsjDPlq0LvDKxNefcZTJ/iKBu+plsHsLqZhUeGf1+82LAcA35UZGbU6ksEx2Utphc/g=="
+  "resolved" "https://registry.npmjs.org/babel-plugin-prismjs/-/babel-plugin-prismjs-2.1.0.tgz"
+  "version" "2.1.0"
+
 "babel-plugin-syntax-object-rest-spread@^6.8.0":
   "integrity" "sha1-/WU28rzhODb/o6VFjEkDpZe7O/U="
   "resolved" "https://registry.npmjs.org/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz"
@@ -9310,6 +9315,11 @@
     "ansi-styles" "^5.0.0"
     "react-is" "^17.0.1"
 
+"prismjs@^1.18.0", "prismjs@^1.24.1":
+  "integrity" "sha512-mNPsedLuk90RVJioIky8ANZEwYm5w9LcvCXrxHlwf4fNVSn8jEipMybMkWUyyF0JhnC+C4VcOVSBuHRKs1L5Ow=="
+  "resolved" "https://registry.npmjs.org/prismjs/-/prismjs-1.24.1.tgz"
+  "version" "1.24.1"
+
 "process-nextick-args@~2.0.0":
   "integrity" "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag=="
   "resolved" "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
@@ -10565,10 +10575,10 @@
   "resolved" "https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz"
   "version" "1.0.5"
 
-"skylight-react@^0.9.8":
-  "integrity" "sha512-fgWAjx3kWWqp6BljaB+jlShEnDNzhRHPYk+dxpHmreHT1W1/FnVnS9WwM2docRvmQdFjCBYppUWyQNtc/S/Kfw=="
-  "resolved" "https://registry.npmjs.org/skylight-react/-/skylight-react-0.9.8.tgz"
-  "version" "0.9.8"
+"skylight-react@^0.9.9":
+  "integrity" "sha512-EIf8zZnT3IGDkpqOMNBX9AeIow1XATEhCDPjFiI+Fs7Tqnq1Oy210wLAsY2v3oWSCjruxWUa4G9j7SDUnwA+9w=="
+  "resolved" "https://registry.npmjs.org/skylight-react/-/skylight-react-0.9.9.tgz"
+  "version" "0.9.9"
   dependencies:
     "@testing-library/jest-dom" "^5.11.4"
     "@testing-library/react" "^11.1.0"

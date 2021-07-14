@@ -4,7 +4,7 @@ import { VscLink } from 'react-icons/vsc';
 
 const IconButtonProps = () => {
     return (
-        <Flex gap={1}>
+        <Flex wrap center gap={1}>
             <IconButton icon={<VscLink/>}/>
             <IconButton icon={<VscLink/>} kind="neutral"/>
             <IconButton icon={<VscLink/>} kind="highlight"/>

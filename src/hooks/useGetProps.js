@@ -1,27 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { PropsContext } from './PropsContext';
 
 export default function useGetProps(label) {
-    //fetch whole thing once
-    const [allProps, setAllProps] = useState(null);
+    const { allProps } = useContext(PropsContext);
+
     //set for component when page loads
     const [props, setProps] = useState(null);
- 
-    useEffect(() => {
-        fetch('docs.json',{
-            headers : {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-             }
-          })
-            .then(response => {
-                return response.json();
-          }).then(data => {
-            const arr = Object.values(data);
-            setAllProps(arr);
-          }).catch(err => {
-            console.log("Error Reading data " + err);
-          });
-    }, []);
 
     useEffect(() => {
         if(allProps) {

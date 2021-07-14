@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Grid } from 'skylight-react';
 import { COMPONENTS, UTILS } from './data/components';
@@ -9,9 +9,28 @@ import Styles from './pages/Styles';
 import Useful from './pages/Useful';
 import './App.css';
 import 'skylight-react/dist/skylight.css'
+import { PropsContext } from './hooks/PropsContext';
  
 function App() {
-  return (
+const [allProps, setAllProps] = useState(null);
+
+  useEffect(() => {
+    fetch('docs.json')
+        .then(response => {
+            return response.json();
+      }).then(data => {
+        console.log("all props fetched");
+        const arr = Object.values(data);
+        setAllProps(arr);
+      }).catch(err => {
+        console.log("Error Reading data " + err);
+      });
+}, []);
+
+const providerValue = useMemo(() => ({ allProps, setAllProps }), [allProps, setAllProps]);
+
+  return ( 
+    <PropsContext.Provider value={providerValue}>
       <Router>
         <div className="App">
         <Header/>
@@ -34,6 +53,7 @@ function App() {
           </Grid>
         </div>
       </Router>
+    </PropsContext.Provider>
   );
 }
 

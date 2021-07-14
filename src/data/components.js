@@ -55,7 +55,7 @@ export const COMPONENTS = [
     {label: 'Warning', path:'#warning'} ]
 },  
 { 
-  label: 'Button Bar',
+  label: 'Button Bar', 
   path: 'buttonbar',
   component: 'ButtonBarProps',
   layout: Component,
@@ -137,6 +137,10 @@ export const COMPONENTS = [
   label: 'Checkbox',
   path: 'checkbox',
   component: 'CheckboxProps',
+  variants: [
+    {label: 'Small', path:'#small'},
+    {label: 'Big', path:'#big'}
+  ],
   layout: Component
 },
 {
@@ -152,12 +156,14 @@ export const UTILS = [
     label: 'Flex',
     path: 'flex',
     component: 'FlexProps',
+    description: "A flexbox utility component to use as a wrapper.",
     layout: Component,
   },
   {
     label: 'Grid',
     path: 'grid',
     component: 'GridProps',
+    description: "A grid utility component to use as a wrapper.",
     layout: Component,
   }
 ]

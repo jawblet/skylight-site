@@ -6,7 +6,7 @@ const ButtonProps = () => {
     const cta = useLocation().hash === "#cta";
 
     return( 
-    <Flex gap={1}>
+    <Flex center wrap gap={1}>
         <Button label="Inline" CTA={cta}/>
         <Button label="Neutral" kind="neutral" CTA={cta}/>
         <Button label="Highlight" kind="highlight" CTA={cta}/>

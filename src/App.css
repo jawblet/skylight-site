@@ -2,6 +2,7 @@
     padding: 1.5rem;
     background: var(--sand);
     min-height: 100vh;
+    overflow: auto;
 }
 
 .component {
@@ -14,86 +15,17 @@
   min-height: 20rem;
 }
 
-/* STICKERS */
-.jawblia {
-  position: absolute;
-  top: 3rem;
-  right: 1rem;
-  transform: rotate(-3deg);
-  transition: transform 0.35s;
-}
-
-.jawblia:hover{
-  transform: rotate(-8deg);
-}
-
-.jawblia__back{
-  fill: var(--forest-h);
- }
-
-.jawblia__text{
-  stroke: var(--forest);
-}
-
-.jawblia__border{
-   stroke: var(--forest);
-}
-
-.github{
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 2;
-  transform: rotate(5deg);
-  transition: transform 0.35s;
-}
-
-.github:hover{
-  transform: rotate(0deg);
-}
-
-.github__back {
-  fill: var(--purple-h);
-}
-
-.github__text {
-  fill: var(--purple);
-}
-
-.skylight {
-  position: absolute;
-  top: 1rem;
-  right: 10rem;
-  z-index: 3;
-  transition: transform 0.35s;
-}
-
-.skylight:hover{
-  transform: rotate(-30deg);
-}
-
-.skylight__back {
-  fill: var(--forest);
-}
-
-.skylight__text {
-  fill: var(--green-h);
-}
-
-.skylight__sun {
-  fill: var(--green-h);
-}
-
 .codeblock {
   padding: 1rem;
   background: var(--body);
   border-radius: 0.5rem;
 }
 
-code, pre {
-  white-space: pre-wrap;
-	word-spacing: normal;
-	word-break: break-word;
-	word-wrap: normal;
-	line-height: 1.5;
+.color {
+  border: 1px solid var(--bolightest);
+}
+
+.color__swatch {
+  height: 5rem;
+  width: 5rem;
 }
