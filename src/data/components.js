@@ -119,6 +119,7 @@ export const COMPONENTS = [
   label: 'Accordion menu',
   path: 'accordion',
   component: 'AccordionProps',
+  components: ['Accordion', 'AccordionTitle', 'AccordionDropdown'],
   layout: Component,
 },
 {
@@ -176,6 +177,11 @@ export const CUSTOM = [
   {
     label: "Useful",
     path: "useful"
+  },
+  {
+    label: "Animations",
+    path: "animations"
   }
-]
+] 
+
 

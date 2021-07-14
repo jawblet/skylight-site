@@ -41,7 +41,8 @@ const Color = ({ color }) => {
 };
 
 const Styles = () => {
-    return (<div className="component">
+    return (
+    <div className="component">
         <h2 className="marBottomL">Styles</h2>
         <Flex column gap={1}>
         <h3>Base colors</h3>
