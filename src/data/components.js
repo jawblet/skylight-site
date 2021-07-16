@@ -1,6 +1,12 @@
 import { Component, Multicomponent } from '../pages/Component';
  
 export const COMPONENTS = [
+  {
+    label: 'Badge',
+    path: 'badge',
+    component: 'BadgeProps',
+    layout: Component
+  },
   { 
     label: 'Card',
     path: 'card',

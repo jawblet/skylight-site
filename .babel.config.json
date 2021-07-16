@@ -1,5 +1,5 @@
 {
-  "plugins": [
+  "plugins": [ 
     ["prismjs", {
       "languages": ["javascript", "css", "html"],
       "plugins": ["line-numbers", "show-language"],

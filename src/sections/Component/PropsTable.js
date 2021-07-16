@@ -5,7 +5,7 @@ const PropsTable = ({ props }) => {
     return (
         <div className="props">
            {props && props.map((el, i) => { 
-               console.log(props);
+//               console.log(props);
                const name = el[0]
                const dataType = el[1].type?.name
                const values = el[1].type?.value?.map(el => el.value) // if enum 

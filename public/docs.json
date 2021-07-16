@@ -169,6 +169,48 @@
       }
     }
   },
+  "src/lib/components/Banner/Flag.js": {
+    "description": "",
+    "displayName": "Flag",
+    "methods": [],
+    "props": {
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'info'",
+              "computed": false
+            },
+            {
+              "value": "'error'",
+              "computed": false
+            },
+            {
+              "value": "'success'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Banner type"
+      },
+      "text": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Banner text"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Styles"
+      }
+    }
+  },
   "src/lib/components/Breadcrumbs/Breadcrumbs.js": {
     "description": "",
     "displayName": "BreadCrumbs",
@@ -207,7 +249,7 @@
               "computed": false
             },
             {
-              "value": "'empty'",
+              "value": "'inline'",
               "computed": false
             },
             {
@@ -417,7 +459,44 @@
   "src/lib/components/ButtonBar/ButtonBar.js": {
     "description": "",
     "displayName": "ButtonBar",
-    "methods": []
+    "methods": [],
+    "props": {
+      "direction": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"row\"",
+              "computed": false
+            },
+            {
+              "value": "\"column\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Direction of button bar",
+        "defaultValue": {
+          "value": "\"row\"",
+          "computed": false
+        }
+      },
+      "divide": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Divide the buttons"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Children"
+      }
+    }
   },
   "src/lib/components/Card/Card.js": {
     "description": "",
@@ -458,6 +537,27 @@
         },
         "required": false,
         "description": "Box label"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"big\"",
+              "computed": false
+            },
+            {
+              "value": "\"small\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Box size",
+        "defaultValue": {
+          "value": "\"small\"",
+          "computed": false
+        }
       },
       "id": {
         "type": {
@@ -910,19 +1010,92 @@
     "displayName": "Modal",
     "methods": [],
     "props": {
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "Defines if the modal appears"
+      },
       "children": {
         "type": {
           "name": "node"
         },
-        "required": false,
+        "required": true,
         "description": "The modal contents"
       },
-      "handleClose": {
+      "width": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The modal width",
+        "defaultValue": {
+          "value": "\"40rem\"",
+          "computed": false
+        }
+      },
+      "height": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The modal height"
+      },
+      "showCloseButton": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If the modal close button appears",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "onOpen": {
         "type": {
           "name": "func"
         },
         "required": false,
-        "description": "Handle closing the modal"
+        "description": "Callback function when the modal opens"
+      },
+      "onClose": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback function when the modal closes"
+      },
+      "zIndex": {
+        "defaultValue": {
+          "value": "4",
+          "computed": false
+        },
+        "required": false
+      },
+      "backgroundZIndex": {
+        "defaultValue": {
+          "value": "3",
+          "computed": false
+        },
+        "required": false
       }
     }
   },
@@ -970,6 +1143,55 @@
         },
         "required": false,
         "description": "Function to call onClick"
+      }
+    }
+  },
+  "src/lib/components/Tabs/Tab.js": {
+    "description": "",
+    "displayName": "Tab",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Id used to set the active tab"
+      },
+      "active": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Active state"
+      },
+      "handleClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Handle click"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Component children"
+      }
+    }
+  },
+  "src/lib/components/Tabs/Tabs.js": {
+    "description": "",
+    "displayName": "Tabs",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "<Tab/> children"
       }
     }
   },
@@ -1041,6 +1263,13 @@
         },
         "required": false,
         "description": "Function to call onClick"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom classname"
       }
     }
   },
@@ -1095,45 +1324,121 @@
       }
     }
   },
-  "src/lib/components/Tooltip.js": {
+  "src/lib/components/Tooltip/Tooltip.js": {
     "description": "",
     "displayName": "Tooltip",
-    "methods": []
+    "methods": [],
+    "props": {
+      "show": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "If tooltip appears"
+      },
+      "direction": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Tooltip orientation",
+        "defaultValue": {
+          "value": "\"top\"",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom style"
+      }
+    }
   },
   "src/lib/components/animate/Blur.js": {
     "description": "",
     "displayName": "Blur",
-    "methods": []
+    "methods": [],
+    "props": {
+      "in": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "When the transition comes in"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Component children"
+      }
+    }
   },
   "src/lib/components/animate/DropdownY.js": {
     "description": "",
     "displayName": "DropdownY",
-    "methods": []
+    "methods": [],
+    "props": {
+      "in": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "When the transition comes in"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Component children"
+      }
+    }
   },
   "src/lib/components/animate/Fade.js": {
     "description": "",
     "displayName": "Fade",
-    "methods": []
+    "methods": [],
+    "props": {
+      "in": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "When the transition comes in"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Component children"
+      }
+    }
   },
-  "src/lib/components/animate/Rolldown.js": {
+  "src/lib/components/animate/SlideX.js": {
     "description": "",
-    "displayName": "Rolldown",
-    "methods": []
-  },
-  "src/lib/components/animate/Slide.js": {
-    "description": "",
-    "displayName": "Slide",
-    "methods": []
-  },
-  "src/lib/components/animate/SwitchFade.js": {
-    "description": "",
-    "displayName": "SwitchFade",
-    "methods": []
-  },
-  "src/lib/components/animate/SwitchSlide.js": {
-    "description": "",
-    "displayName": "SwitchSlide",
-    "methods": []
+    "displayName": "SlideX",
+    "methods": [],
+    "props": {
+      "in": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "When the transition comes in"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Component children"
+      }
+    }
   },
   "src/lib/components/atoms/Anchor.js": {
     "description": "",

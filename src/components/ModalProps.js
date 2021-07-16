@@ -7,10 +7,9 @@ const ModalProps = () => {
     return (  
         <div>
             <Button label="open modal" handleClick={() => setShow(!show)}/>
-           {show && 
-           <Modal>
-                YEHAW!
-            </Modal>}
+            <Modal open={show}>
+                <h3>YEHAW!</h3>
+            </Modal>
         </div>
     );
 }
