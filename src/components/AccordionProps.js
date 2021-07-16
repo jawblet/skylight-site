@@ -5,12 +5,10 @@ const AccordionProps = () => {
     return (<div>
         <Accordion>
            <AccordionTitle id="test" defaultChecked>
-               Expand, me
+             <h3>Is the light natural?</h3>
            </AccordionTitle>
            <AccordionDropdown>
-               <p>hell yes
-               hell yeah
-               hell o </p>
+               <p>Rothko specified the light should only be natural during the day.</p>
            </AccordionDropdown>
         </Accordion>
     </div>);

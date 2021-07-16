@@ -5,9 +5,10 @@ import useGetProps from '../../hooks/useGetProps';
 
 const tabs = ["Props", "JS", "Style"];
 
-const ComponentInfo = ({ label }) => {
+const ComponentInfo = ({ label, components }) => {
     const [tab, setTab] = useState(0);
-    const { props } = useGetProps(label);
+
+    const { props } = useGetProps(label, components);
 
     return ( 
     <>

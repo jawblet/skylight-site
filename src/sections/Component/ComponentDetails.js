@@ -31,7 +31,7 @@ const ComponentDetails = ({ object }) => {
                     <VariantMenu items={object.variants}/>}
             </Grid>
                 <p>{object.description}</p>
-            <ComponentInfo label={object.label}/>
+            <ComponentInfo label={object.label} components={object.components}/>
      </Flex>
     );
 }

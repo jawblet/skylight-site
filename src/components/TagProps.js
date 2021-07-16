@@ -8,16 +8,16 @@ const TagProps = () => {
     return (
         <Flex gap={1}>
             <Tag chip={chip}>
-                Facts
+                Skylight
             </Tag>
             <Tag kind="highlight" chip={chip}>
-                Lies
+                Sunlight
             </Tag>
             <Tag kind="lowlight" chip={chip}>
-                Fiction
+                Artificial light
             </Tag>
             <Tag kind="dark" chip={chip}>
-                Fiction
+                No light
             </Tag>
         </Flex>
     );

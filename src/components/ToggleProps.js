@@ -3,7 +3,7 @@ import { Toggle } from 'skylight-react';
 
 const ToggleProps = () => {
     return (
-        <Toggle/>
+        <Toggle label="open skylight"/>
     );
 }
  

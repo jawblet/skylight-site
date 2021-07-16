@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonBar, IconButton } from 'skylight-react';
-import { VscUnmute } from 'react-icons/vsc';
+import { VscLink, VscMilestone, VscLocation } from 'react-icons/vsc';
 import { useLocation } from 'react-router-dom';
 
 const ButtonBarProps = () => {
@@ -9,10 +9,10 @@ const ButtonBarProps = () => {
     return (
  <ButtonBar direction={direction}>
              <div>
-                <IconButton icon={<VscUnmute/>}/>
+                <IconButton icon={<VscLink/>}/>
              </div>
-            <IconButton icon={<VscUnmute/>}/>
-            <IconButton icon={<VscUnmute/>}/>
+            <IconButton icon={<VscMilestone/>}/>
+            <IconButton icon={<VscLocation/>}/>
          </ButtonBar>
     );
 }

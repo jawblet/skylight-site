@@ -20,7 +20,6 @@ const [allProps, setAllProps] = useState(null);
         .then(response => {
             return response.json();
       }).then(data => {
-        console.log("all props fetched");
         const arr = Object.values(data);
         setAllProps(arr);
       }).catch(err => {

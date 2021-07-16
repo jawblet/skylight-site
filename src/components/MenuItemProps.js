@@ -4,7 +4,7 @@ import { MenuItem } from 'skylight-react';
 const MenuItemProps = () => {
     return (
         <MenuItem>
-            sprigs of rosemary
+            North wall
         </MenuItem>
     );
 }
