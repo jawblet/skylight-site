@@ -155,6 +155,19 @@ export const COMPONENTS = [
   path: 'modal',
   component: 'ModalProps',
   layout: Component
+},
+{
+  label: 'Tabs',
+  path: 'tabs',
+  component: 'TabsProps',
+  layout: Component,
+  components: ["Tabs", "Tab"]
+},
+{
+  label: 'Tooltip',
+  path: 'tooltip',
+  component: 'TooltipProps',
+  layout: Component
 }
 ];
 

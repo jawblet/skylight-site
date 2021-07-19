@@ -1,6 +1,5 @@
 import React from 'react';
-import { ButtonBar, IconButton } from 'skylight-react';
-import { VscUnmute } from 'react-icons/vsc';
+import Codeblock from '../sections/Component/Codeblock';
 
 const UTILS =`
 .blur {
@@ -38,7 +37,7 @@ const UTILS =`
 `;
 
 const BUTTON_BAR = `
-//
+// FOR BUTTONBAR ??!!!
 
 // WRAPPED BTN
 .buttonbar--row > div:first-of-type > button:first-of-type {
@@ -58,12 +57,7 @@ const Useful = () => {
     return (<div className="component">
          <h3 className="marBottomL">Useful</h3>
          <h4>Style snippets</h4>
-         <div className="codeblock">
-                <code style={{color:"var(--off-white)"}}>
-                    {UTILS}
-                </code>
-         </div>
-
+        <Codeblock code={UTILS} lang="css"/>
     </div>);
 }
  

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Tabs, Tab } from 'skylight-react';
-import PropsTable from './PropsTable';
+import PropsTable from './PropsTable'; 
 import useGetProps from '../../hooks/useGetProps';
 import useGetCode from '../../hooks/useGetCode';
 import Codeblock from './Codeblock';

@@ -9,7 +9,7 @@ const Codeblock = ({ code, lang }) => {
     }, [code])
 
     return (
-        <pre className="line-numbers codeblock">
+        <pre className="codeblock">
         <code className={`language-${lang}`}>
             {code}
         </code>

@@ -1024,6 +1024,28 @@
         "required": true,
         "description": "The modal contents"
       },
+      "zIndex": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Z-index of the modal",
+        "defaultValue": {
+          "value": "4",
+          "computed": false
+        }
+      },
+      "backgroundZIndex": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Z-index of the modal background",
+        "defaultValue": {
+          "value": "3",
+          "computed": false
+        }
+      },
       "width": {
         "type": {
           "name": "union",
@@ -1082,20 +1104,6 @@
         },
         "required": false,
         "description": "Callback function when the modal closes"
-      },
-      "zIndex": {
-        "defaultValue": {
-          "value": "4",
-          "computed": false
-        },
-        "required": false
-      },
-      "backgroundZIndex": {
-        "defaultValue": {
-          "value": "3",
-          "computed": false
-        },
-        "required": false
       }
     }
   },
@@ -1153,10 +1161,18 @@
     "props": {
       "id": {
         "type": {
-          "name": "node"
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
         },
         "required": false,
-        "description": "Id used to set the active tab"
+        "description": "Id"
       },
       "active": {
         "type": {
@@ -1178,6 +1194,20 @@
         },
         "required": true,
         "description": "Component children"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Custom className"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Custom styles"
       }
     }
   },
@@ -1329,7 +1359,7 @@
     "displayName": "Tooltip",
     "methods": [],
     "props": {
-      "show": {
+      "open": {
         "type": {
           "name": "bool"
         },
@@ -1338,7 +1368,25 @@
       },
       "direction": {
         "type": {
-          "name": "string"
+          "name": "enum",
+          "value": [
+            {
+              "value": "'top'",
+              "computed": false
+            },
+            {
+              "value": "'bottom'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            },
+            {
+              "value": "'left'",
+              "computed": false
+            }
+          ]
         },
         "required": false,
         "description": "Tooltip orientation",
@@ -1346,6 +1394,13 @@
           "value": "\"top\"",
           "computed": false
         }
+      },
+      "text": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Tooltip text"
       },
       "style": {
         "type": {

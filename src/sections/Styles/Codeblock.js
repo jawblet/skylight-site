@@ -45,16 +45,12 @@ const Codeblock = () => {
         setCode(codeBlock);
    }, []);
 
-   useEffect(() => {
-        Prism.highlightAll();
-}, []);
-
     useEffect(() => {
         Prism.highlightAll();
     }, [code]);
 
     return (
-    <pre className="line-numbers codeblock">
+    <pre className="codeblock">
         <code className="language-js">
             {code}
         </code>

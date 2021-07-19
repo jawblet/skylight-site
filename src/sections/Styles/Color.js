@@ -1,7 +1,8 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
-import { COLORS, BASE_COLORS } from '../../data/vars';
 import { Flex, Grid } from 'skylight-react'; 
 import Codeblock from './Codeblock';
+import { BASE_COLORS, COLORS } from '../../data/vars';
+/* eslint-disable react/jsx-no-comment-textnodes */
 
 const ColorSwatch = ({ color }) => {
     const [hex, setHex] = useState(null);
@@ -41,7 +42,55 @@ const ColorSwatch = ({ color }) => {
 };
 
 const Color = () => {
-    return (<Flex column gap={1}>
+    return (
+    <Flex column gap={1}>
+        <h3>Base colors</h3>
+        {BASE_COLORS.map(row => {
+            return Object.entries(row).map(([key, vals]) => {
+                return(
+                    <Grid key={key}  
+                        columns="10rem repeat(4, 1fr)" gap={1.5} className="marBottomL">
+                        <h4 style={{paddingTop:"1rem"}}>{key}</h4>
+                            {vals.map((el, i)=> {
+                                return <ColorSwatch key={i} color={el}/>
+                            })}
+                    </Grid>
+                    )
+                })
+            })}
+        <h3>Accent colors</h3>
+            <p>@jawblia pick 2 colors (one light/dark each) and 1 highlight </p>
+            <Grid justify="center" columns="10rem repeat(4, 1fr)" 
+                gap={1.5}  
+                className="marBottomL">
+                    <h4>&nbsp;</h4>
+                    <h4>highlight</h4>
+                    <h4>light</h4>
+                    <h4>dark</h4>
+                    <h4>&nbsp;</h4>
+                {COLORS.map((row, i)=> {
+                    return Object.entries(row).map(([key, vals]) => {
+                        return( <>
+                            <h4 style={{paddingTop:"1rem"}}>{key}</h4>
+                            {vals.map((el, i)=> {
+                                    return (<ColorSwatch key={i} color={el}/>)
+                                })}
+                            </>
+                        )
+                })
+            })}
+        </Grid>
+        <code className="light"> 
+           // hey this is the code for the color swatch above <br/>
+           // get the value of css variables in react and convert rgb --> hex </code>
+        <Codeblock/>
+    </Flex>);
+}
+ 
+export default Color;
+
+/**
+ <Flex column gap={1}>
         <h3>Base colors</h3>
         {BASE_COLORS.map(row => {
                 return Object.entries(row).map(([key, vals]) => {
@@ -50,7 +99,7 @@ const Color = () => {
                         columns="10rem repeat(4, 1fr)" gap={1.5} className="marBottomL">
                         <h4 style={{paddingTop:"1rem"}}>{key}</h4>
                             {vals.map((el, i)=> {
-                                return <Color key={i} color={el}/>
+                                return <ColorSwatch key={i} color={el}/>
                             })}
                     </Grid>
                     )
@@ -79,10 +128,8 @@ const Color = () => {
             })}
         </Grid>
         <code className="light"> 
-            // hey this is the code for the color swatch above <br/>
-            // get the value of css variables in react and convert rgb --> hex </code>
+            hey this is the code for the color swatch above <br/>
+            get the value of css variables in react and convert rgb --> hex </code>
         <Codeblock/>
-        </Flex>);
-}
- 
-export default Color;
+        </Flex>
+ */

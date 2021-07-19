@@ -6,7 +6,7 @@ const CheckboxProps = () => {
     const hash = useLocation().hash;
 
     return (
-        <Checkbox label="Open skylight" />
+        <Checkbox label="Open skylight" size={hash === "#big" ? "big" : "small"}/>
     );
 }
  
