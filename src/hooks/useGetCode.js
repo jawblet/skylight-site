@@ -10,7 +10,7 @@ export default function useOctokit(label) {
        await octokit.request(
           'GET /repos/{owner}/{repo}/contents/{path}', {
              owner: 'jawblia',
-             repo: 'skylight',
+             repo: 'skylight', 
              path: `src/lib/components/${label}/${label}.js`
        }).then(res => {
            console.log(res);

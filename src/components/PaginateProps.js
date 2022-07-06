@@ -11,4 +11,3 @@ const PaginateProps = () => {
  
 export default PaginateProps;
 
-    

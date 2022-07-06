@@ -6,8 +6,6 @@ import Home from './pages/Home';
 import Header from './sections/Header';
 import SideMenu from './sections/Home/SideMenu';
 import Styles from './pages/Styles';
-import Useful from './pages/Useful';
-import Animations from './pages/Animations';
 import './App.css';
 import 'skylight-react/dist/skylight.css'
 import { PropsContext } from './hooks/PropsContext';
@@ -45,9 +43,7 @@ const providerValue = useMemo(() => ({ allProps, setAllProps }), [allProps, setA
                           render={(props) => <Layout object={c} {...props}/>
                         }/>)
                       })}
-                  <Route path="/animations" component={Animations}/>
                   <Route path="/styles" component={Styles}/>
-                  <Route path="/useful" component={Useful}/>
                   <Route exact path="/" component={Home}/>
               </Switch>
           </div>
