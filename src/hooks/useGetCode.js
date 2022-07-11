@@ -6,20 +6,23 @@ export default function useOctokit(label) {
    const [css, setCss] = useState(null);
 
    useEffect(() => {
-     async function onLoad() {
-       await octokit.request(
-          'GET /repos/{owner}/{repo}/contents/{path}', {
-             owner: 'jawblia',
-             repo: 'skylight', 
-             path: `src/lib/components/${label}/${label}.js`
-       }).then(res => {
-           console.log(res);
-           const encoded = res.data.content;
-           const decoded = atob(encoded);
-           setJs(decoded);
+        console.log(label);
+
+        async function onLoad() {
+        await octokit.request(
+            'GET /repos/{owner}/{repo}/contents/{path}', {
+                owner: 'jawblia',
+                repo: 'skylight', 
+                path: `src/lib/components/${label}/${label}.js`
+        }).then(res => {
+            console.log(res);
+            const encoded = res.data.content;
+            const decoded = atob(encoded);
+            setJs(decoded);
+            }
+            ).catch(err => console.log(err));
         }
-        ).catch(err => console.log(err));
-    }
+        
         onLoad();
 
     },[]);

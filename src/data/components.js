@@ -121,13 +121,13 @@ export const COMPONENTS = [
   ],
   layout: Component,
 },
-{
+/* {
   label: 'Accordion menu',
   path: 'accordion',
   component: 'AccordionProps',
   components: ['Accordion', 'AccordionTitle', 'AccordionDropdown'],
   layout: Component,
-},
+}, */
 {
   label: 'Banner',
   path: 'banner',
@@ -192,14 +192,6 @@ export const CUSTOM = [
   {
     label: "Styles",
     path: "styles"
-  },
-  {
-    label: "Useful",
-    path: "useful"
-  },
-  {
-    label: "Animations",
-    path: "animations"
   }
 ] 
 

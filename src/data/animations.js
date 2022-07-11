@@ -3,7 +3,7 @@ import { DropdownY, Button, Fade, Blur, SlideX } from 'skylight-react';
 export const ANIMATIONS = [
     {
       label: 'Fade',
-      id: 'fade',
+      id: 'fade', 
       path: '/animations#fade', 
       component: <Fade/>
     },

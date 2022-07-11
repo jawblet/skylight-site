@@ -21,7 +21,7 @@ const [allProps, setAllProps] = useState(null);
         const arr = Object.values(data);
         setAllProps(arr);
       }).catch(err => {
-        console.log("Error Reading data " + err);
+        console.log("Error reading data: " + err);
       });
 }, []);
 

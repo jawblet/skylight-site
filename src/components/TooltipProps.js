@@ -7,10 +7,10 @@ const TooltipProps = () => {
     
     return (
         <div style={{height:"3rem", position:"relative"}}>
-            <Tooltip open={open} text="????"/>
+            <Tooltip open={open} text="Tooltip text"/>
             <IconButton icon={<VscListTree/>}
-                        handleMouseEnter={() => setOpen(!open)}
-                        handleMouseLeave={() => setOpen(!open)}>
+                    handleMouseEnter={() => setOpen(!open)}
+                    handleMouseLeave={() => setOpen(!open)}>
             </IconButton>
         </div>
     );
