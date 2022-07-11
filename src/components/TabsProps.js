@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Tabs, Tab } from 'skylight-react';
 
-const tabs = ["grounds muckety muck", "chapel", "skylight"];
+const tabs = ["grounds", "chapel", "skylight"];
 
 const TabsProps = () => {
 const [tab, setTab] = useState(0);
